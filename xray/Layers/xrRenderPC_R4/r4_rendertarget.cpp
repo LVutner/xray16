@@ -15,6 +15,7 @@
 #include "../xrRenderDX10/msaa/dx10MSAABlender.h"
 #include "../xrRenderDX10/DX10 Rain/dx10RainBlender.h"
 
+#include "blender_example.h" //We have to include our blenderek
 
 #include "../xrRender/dxRenderDeviceRender.h"
 
@@ -497,6 +498,16 @@ CRenderTarget::CRenderTarget		()
 		//if (RImplementation.o.advancedpp)
 		//	s_accum_direct_volumetric.create("accum_volumetric_sun");
 	}
+
+
+	//Example shit
+	{
+		u32 w = Device.dwWidth, h = Device.dwHeight; //Resolution
+		b_example = xr_new<CBlender_example>(); //You should remember that CBlender from blender_example.h/.cpp
+		rt_example.create(r2_RT_example, w, h, D3DFMT_A8R8G8B8, 1); //Create RT, without MSAA, full resolution
+		s_example.create(b_example, "r2\\example"); //Create our shader
+	}
+	
 
 	//	RAIN
 	//	TODO: DX10: Create resources only when DX10 rain is enabled.
@@ -1037,6 +1048,9 @@ CRenderTarget::~CRenderTarget	()
 	xr_delete					(b_accum_point			);
 	xr_delete					(b_accum_direct			);
 	xr_delete					(b_ssao					);
+
+	xr_delete					(b_example				); //Delete it nahuy, it's end of rendering
+
 
    if( RImplementation.o.dx10_msaa )
    {

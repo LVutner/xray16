@@ -49,6 +49,8 @@ public:
 	IBlender*					b_ssao;
 	IBlender*					b_ssao_msaa[8];
 
+	IBlender*					b_example; //Da, da
+
     // compute shader for hdao
     IBlender*                   b_hdao_cs;
     IBlender*                   b_hdao_msaa_cs;
@@ -72,6 +74,8 @@ public:
 	ref_rt						rt_Position;		// 64bit,	fat	(x,y,z,?)				(eye-space)
 	ref_rt						rt_Normal;			// 64bit,	fat	(x,y,z,hemi)			(eye-space)
 	ref_rt						rt_Color;			// 64/32bit,fat	(r,g,b,specular-gloss)	(or decompressed MET-8-8-8-8)
+
+	ref_rt						rt_example; //DoenitzRTX, RGBA8, not so thicc
 
 	// 
 	ref_rt						rt_Accumulator;		// 64bit		(r,g,b,specular)
@@ -136,6 +140,9 @@ private:
 
 	//	generate min/max
 	ref_shader					s_create_minmax_sm;
+
+	ref_shader					s_example; //Shaaaadeeeeerrrrrrr
+	
 
 	//	DX10 Rain
 	ref_shader					s_rain;
@@ -267,6 +274,8 @@ public:
 
 	//	Generates min/max sm
 	void						create_minmax_SM();
+
+	void						phase_example			(); //Ku renderphase
 
 	void						phase_rain				();
 	void						draw_rain				(light &RainSetup);

@@ -324,6 +324,12 @@ void	CRenderTarget::phase_combine	()
 		}
 	}
 
+
+	//Here we execute our renderphase, after forward rendering
+	//Because we can, and we will do sopen
+	phase_example();
+
+
 /*
    if( RImplementation.o.dx10_msaa )
    {

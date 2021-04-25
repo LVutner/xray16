@@ -63,6 +63,8 @@ void	CBlender_combine::Compile(CBlender_Compile& C)
 		C.r_dx10Texture		("s_bloom",			r2_RT_bloom1);
 		C.r_dx10Texture		("s_distort",		r2_RT_generic1);
 
+		C.r_dx10Texture		("s_example",		r2_RT_example);
+
 		C.r_dx10Sampler		("smp_nofilter");
 		C.r_dx10Sampler		("smp_rtlinear");
 		C.r_End				();
@@ -82,6 +84,9 @@ void	CBlender_combine::Compile(CBlender_Compile& C)
 		C.r_dx10Texture		("s_bloom",			r2_RT_bloom1);
 		C.r_dx10Texture		("s_distort",		r2_RT_generic1);
 
+		C.r_dx10Texture		("s_example",		r2_RT_example);
+
+
 		C.r_dx10Sampler		("smp_nofilter");
 		C.r_dx10Sampler		("smp_rtlinear");
 		C.r_End				();
@@ -99,6 +104,8 @@ void	CBlender_combine::Compile(CBlender_Compile& C)
 		C.r_dx10Texture		("s_image",			r2_RT_generic0);
 		C.r_dx10Texture		("s_bloom",			r2_RT_bloom1);
 		C.r_dx10Texture		("s_distort",		r2_RT_generic1);
+
+		C.r_dx10Texture		("s_example",		r2_RT_example);
 
 		C.r_dx10Sampler		("smp_nofilter");
 		C.r_dx10Sampler		("smp_rtlinear");
@@ -118,6 +125,8 @@ void	CBlender_combine::Compile(CBlender_Compile& C)
 		C.r_dx10Texture		("s_image",			r2_RT_generic0);
 		C.r_dx10Texture		("s_bloom",			r2_RT_bloom1);
 		C.r_dx10Texture		("s_distort",		r2_RT_generic1);
+
+		C.r_dx10Texture		("s_example",		r2_RT_example);
 
 		C.r_dx10Sampler		("smp_nofilter");
 		C.r_dx10Sampler		("smp_rtlinear");
@@ -194,6 +203,8 @@ void	CBlender_combine_msaa::Compile(CBlender_Compile& C)
       C.r_dx10Texture		("s_bloom",			r2_RT_bloom1);
       C.r_dx10Texture		("s_distort",		r2_RT_generic1_r);
 
+		C.r_dx10Texture		("s_example",		r2_RT_example);
+
       C.r_dx10Sampler		("smp_nofilter");
       C.r_dx10Sampler		("smp_rtlinear");
       C.r_End				();
@@ -213,6 +224,8 @@ void	CBlender_combine_msaa::Compile(CBlender_Compile& C)
       C.r_dx10Texture		("s_bloom",			r2_RT_bloom1);
       C.r_dx10Texture		("s_distort",		r2_RT_generic1_r);
 
+		C.r_dx10Texture		("s_example",		r2_RT_example);
+
       C.r_dx10Sampler		("smp_nofilter");
       C.r_dx10Sampler		("smp_rtlinear");
       C.r_End				();
@@ -230,6 +243,8 @@ void	CBlender_combine_msaa::Compile(CBlender_Compile& C)
       C.r_dx10Texture		("s_image",			r2_RT_generic0);
       C.r_dx10Texture		("s_bloom",			r2_RT_bloom1);
       C.r_dx10Texture		("s_distort",		r2_RT_generic1_r);
+
+		C.r_dx10Texture		("s_example",		r2_RT_example);
 
       C.r_dx10Sampler		("smp_nofilter");
       C.r_dx10Sampler		("smp_rtlinear");
@@ -249,6 +264,8 @@ void	CBlender_combine_msaa::Compile(CBlender_Compile& C)
       C.r_dx10Texture		("s_image",			r2_RT_generic0);
       C.r_dx10Texture		("s_bloom",			r2_RT_bloom1);
       C.r_dx10Texture		("s_distort",		r2_RT_generic1_r);
+
+		C.r_dx10Texture		("s_example",		r2_RT_example);
 
       C.r_dx10Sampler		("smp_nofilter");
       C.r_dx10Sampler		("smp_rtlinear");
